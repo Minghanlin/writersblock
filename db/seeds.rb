@@ -5,7 +5,7 @@ User.create!(name:  "Mister Wright",
             admin: true)
 
 User.create!(name:  "Mister Wrighter",
-            email: "wrighter@wrightwe.com",
+            email: "wrighter@wrighter.com",
             password:              "misterwrighter",
             password_confirmation: "misterwrighter",
             admin: false)
