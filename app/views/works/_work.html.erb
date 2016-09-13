@@ -1,0 +1,13 @@
+<li id="work-<%= work.id %>">
+  <%= link_to gravatar_for(work.user, size: 50), work.user %>
+  <span class="user"><%= link_to work.user.name, work.user %></span>
+  <span class="title"><%= work.title %></span>
+  <span class="content"><%= work.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(work.created_at) %> ago.
+    <% if current_user?(work.user) %>
+      <%= link_to "delete", micropost, method: :delete,
+                                       data: { confirm: "Please don't! You sure?" } %>
+    <% end %>
+  </span>
+</li>
