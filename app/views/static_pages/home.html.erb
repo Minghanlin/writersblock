@@ -1,7 +1,7 @@
 <% provide(:title, "Home") %>
 <% if logged_in? %>
   <div class="row">
-    <aside class="col-md-4">
+    <aside class="col-md-6">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
@@ -9,10 +9,18 @@
         <%= render 'shared/work_form' %>
       </section>
     </aside>
-    <div class="col-md-8">
-      <h3>Work Feed</h3>
-      <%= render 'shared/feed' %>
-    </div>
+    <aside class="col-md-6">
+      <h3>Writing Tools</h3>
+      <section class="rhyme_generator">
+        <p>Insert Rhymer Here</p>
+      </section>
+      <section class="dictionary">
+        <p>Insert Dictionary Here</p>
+      </section>
+      <section class="thesaurus">
+        <p>Insert Thesaurus Here</p>
+      </section>
+    </aside>
   </div>
 <% else %>
 <div class="center jumbotron">

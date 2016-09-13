@@ -156,6 +156,24 @@ input {
   margin-left: 0;
 }
 
+/* work form */
+
+textarea#content_area {
+  height: 350px;
+}
+
+textarea#title_area {
+  height: 55px;
+}
+
+/* work index */
+
+#worktitle {
+  text-align: center;
+  font-size: 35px;
+  font-family: sans-serif;
+}
+
 /* footer */
 
 footer {
