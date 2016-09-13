@@ -9,6 +9,8 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  mount_uploader :picture, PictureUploader
+  validate  :picture_size
 
 
 
@@ -46,5 +48,14 @@ class User < ApplicationRecord
   def feed
     Work.where("user_id = ?", id)
   end
+
+  private
+
+    # Validates the size of an uploaded picture.
+    def picture_size
+      if picture.size > 5.megabytes
+        errors.add(:picture, "picture should be less than 5MB")
+      end
+    end
 
 end
