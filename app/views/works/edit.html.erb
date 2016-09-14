@@ -25,12 +25,23 @@
   <aside class="col-md-6">
     <h3>Writing Tools</h3>
     <section class="rhyme_generator">
-      <p>Insert Rhymer Here</p>
+      <h5>Rhymer</h5>
+      <form action="javascript:RhymeBrainSubmit()">
+  <input type=text id="RhymeBrainInput">
+  <input type=submit value="Rhyme">
+</form>
+<script type="text/javascript">
+  var RhymeBrainMaxResults = 50;
+</script>
+<script type="text/javascript" src="http://rhymebrain.com/external.js"></script>
+Rhyme results are provided by <a href="http://rhymebrain.com">RhymeBrain.com</a>
     </section>
     <section class="dictionary">
+      <h5>Meanings</h5>
       <p>Insert Dictionary Here</p>
     </section>
     <section class="thesaurus">
+      <h5>Synonyms</h5>
       <p>Insert Thesaurus Here</p>
     </section>
   </aside>
