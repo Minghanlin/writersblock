@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'synonyms/index'
+
   get 'meanings/index'
 
   get 'sessions/new'

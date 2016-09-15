@@ -1,0 +1,17 @@
+<h1>Searching for - <%= @search_term %></h1>
+
+<!-- <form action="searchmeaning">
+  Meaning: <input type="text" name="fname"><br>
+  <input type="submit" value="Submit">
+</form> -->
+
+<section class="synonym_form">
+  <%= form_for(@search_term, :method => :get, html: { multipart: true }) do |f| %>
+  <div class="field">
+    <%= f.text_area :searchterm, :id => "search_term", placeholder: "Search synonym..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
+</section>
+
+<h2>Definition is - <%= @test %></h2>
