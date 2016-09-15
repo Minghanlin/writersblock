@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'meanings/index'
+
   get 'sessions/new'
 
   root 'static_pages#home'
@@ -22,6 +24,8 @@ Rails.application.routes.draw do
   resources :users
 
   resources :works
+
+  resources :meanings
 
 
 end
