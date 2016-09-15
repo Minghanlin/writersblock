@@ -14,9 +14,21 @@ class MeaningsController < ApplicationController
     # end
     # @meanings = []
     @test = Meaning.get('/'+@search_term)
-    puts @test
-    if @test.length >0
+    # puts @test
+    if @test.length >2
+      puts @test[2]['defenition']
+      puts @test[1]['defenition']
+      puts @test[0]['defenition']
+
+  elsif @test.length >1
+
+      puts @test[1]['defenition']
+      puts @test[0]['defenition']
+
+    elsif @test.length >0
+
       @test = @test[0]['defenition']
+      
     else
       @test = "There is nothing"
     end

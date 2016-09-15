@@ -29,5 +29,7 @@ Rails.application.routes.draw do
 
   resources :meanings
 
+  resources :synonyms
+
 
 end
